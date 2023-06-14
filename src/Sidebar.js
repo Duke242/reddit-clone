@@ -14,6 +14,8 @@ function Sidebar() {
       <SiderbarOption className="sidebarOption2"text={'Business, Economics'}/>
       <SiderbarOption className="sidebarOption2"text={'Television'}/>
       <SiderbarOption className="sidebarOption2"text={'..More Topics'}/>
+      <p className='pSidebar'>Create an account to follow your favorite communities and start taking part in conversations.</p>
+      <button className='sidebarButton'>Join Reddit</button>
     </div>
   )
 }

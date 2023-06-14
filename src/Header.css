@@ -27,6 +27,11 @@
     border: none;
     padding-right: 1rem;
   }
+
+  .searchRedditInput:hover { 
+    background-color: white;
+    border: rgb(85, 85, 255) solid 1px;
+  }
   
   .get-app-button,
   .log-in-button {
