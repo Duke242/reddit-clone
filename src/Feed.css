@@ -1,4 +1,17 @@
 .feed  { 
     display: flex;
-    flex: 0.6;
+    flex: 0.85;
+    background-color: #DAE0E6;
+    flex-direction: column;
+}
+
+.trendingTodayHeader {
+    font-weight: 400;
+    margin-left: 2rem;
+    margin-top: 3rem;
+}
+
+.pictureBlock {
+    display: flex;
+
 }
