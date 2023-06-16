@@ -5,20 +5,45 @@
     margin-top: 1rem;
     border-radius: 20px;
     border: none;
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
-
-}
-
-.pictureContainer::before {
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
-    content: "";
-    z-index: 1;
+    position: relative;
 }
 
 .title { 
     color: white;
     margin-left: 1rem;
-    margin-top: 6rem;
+    margin-top: 7rem;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 0;
 }
 
+.titleInfo { 
+    color:white;
+    z-index: 1;
+    position: relative;
+    margin-left: 1rem;
+    font-size: small;
+    margin-top: 0;
+}
+
+.userInfo { 
+    color:white;
+    z-index: 1;
+    position: relative;
+    margin-left: 1rem;
+    font-size: smaller;
+    margin-top: 0;
+}
+ 
+.pictureContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+  
 
