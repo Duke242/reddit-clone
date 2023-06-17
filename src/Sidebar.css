@@ -1,5 +1,5 @@
 .sidebar {
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
     display: flex;
     flex: 0.15;
     flex-direction: column;
@@ -11,16 +11,19 @@
     color: gray;
     margin-bottom: 0;
     font-size: smaller;
+    padding-left: 1.5rem;
 }
 
 .pSidebar { 
     border-top: gray solid 1px;
     padding-top: 2rem;
     margin-top: 8rem;
-    margin-right: 1rem;;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
 }
 
 .sidebarButton{ 
+    margin-left: 1.5rem;
     margin-right: 1rem;
     background-color: rgb(255, 55, 0);
     border: none;
@@ -31,4 +34,5 @@
     font-weight: bold;
     font-size: medium;
 }
+
 

@@ -3,8 +3,8 @@ import './SidebarOption.css'
 
 function SiderbarOption({Icon, text}) {
   return (
-    <div>
-      <span>{Icon}</span> <h3>{text}</h3>
+    <div className='sidebarOptionDiv'>
+      <span>{Icon}</span> <h3 className='sidebarOptionHeader'>{text}</h3>
     </div>
   )
 }

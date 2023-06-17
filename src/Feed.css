@@ -8,9 +8,15 @@
 .trendingTodayHeader {
     font-weight: 400;
     margin-left: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .pictureBlock {
     display: flex;
+}
+
+.popularPostsHeader {
+    margin-left: 2rem;
+    margin-top: 3rem;
+    font-weight: bold;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Feed.css'
 import PictureInfoBlock from './PictureInfoBlock'
+import PopularPostsContainer from './popularPostsContainer'
 
 function Feed() {
     
@@ -21,6 +22,9 @@ function Feed() {
 
         '/>
       </div>
+      <h3 className='popularPostsHeader'>Popular today</h3>
+      <PopularPostsContainer />
+      
     </div>
   )
 }
