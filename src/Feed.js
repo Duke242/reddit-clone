@@ -3,20 +3,20 @@ import './Feed.css';
 import PictureInfoBlock from './PictureInfoBlock';
 import PopularPostsContainer from './popularPostsContainer';
 import PostBlock from './PostBlock';
-import PopupPost from './popupPost';
+import PopupPost from './PopupPost';
 
 function Feed() {
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleCreatePost = () => {
-    setShowPopup(true);
+  const toggleCreatePost = () => {
+    setShowPopup(!showPopup);
   };
 
   return (
     <div className='feed'>
       <div className='trendingHeader'>
         <h3 className='trendingTodayHeader'>Trending today</h3>
-        <button className='createPostButton' onClick={handleCreatePost}>
+        <button className='createPostButton' onClick={toggleCreatePost}>
           Create Post
         </button>
       </div>
@@ -29,7 +29,7 @@ function Feed() {
       <h3 className='popularPostsHeader'>Popular posts</h3>
       <PopularPostsContainer />
       <PostBlock />
-      {showPopup && <PopupPost />}
+      {showPopup && <PopupPost handleCreatePost={toggleCreatePost} />}
     </div>
   );
 }

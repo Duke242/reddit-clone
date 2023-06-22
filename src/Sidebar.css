@@ -35,4 +35,8 @@
     font-size: medium;
 }
 
+.sidebarButton:hover{
+    background-color: rgb(255, 138, 95);
+    cursor: pointer;}
+
 
