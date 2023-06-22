@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Feed.css';
 import PictureInfoBlock from './PictureInfoBlock';
 import PopularPostsContainer from './popularPostsContainer';
 import PostBlock from './PostBlock';
 import PopupPost from './PopupPost';
+import { collection, getDocs } from 'firebase/firestore';
+import db from './db';
+
 
 function Feed() {
   const [showPopup, setShowPopup] = useState(false);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+      getDocs(collection(db, "posts")).then((querySnapshot) => {
+          const posts = querySnapshot.docs.map((doc) => doc.data());
+          setPosts(posts);
+      });
+      }, []);
 
   const toggleCreatePost = () => {
     setShowPopup(!showPopup);
@@ -28,7 +39,14 @@ function Feed() {
       </div>
       <h3 className='popularPostsHeader'>Popular posts</h3>
       <PopularPostsContainer />
-      <PostBlock />
+      {posts.map(post => (
+                <PostBlock 
+                community={post.community}
+                username={post.username}
+                title={post.title}
+                text={post.text}
+                />
+            ))}
       {showPopup && <PopupPost handleCreatePost={toggleCreatePost} />}
     </div>
   );

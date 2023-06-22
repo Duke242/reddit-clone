@@ -3,6 +3,7 @@
     flex: 0.85;
     background-color: #DAE0E6;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .trendingTodayHeader {

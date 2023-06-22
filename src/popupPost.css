@@ -35,6 +35,8 @@
     border: none;
     text-align: center;
     font-size: 20px;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 .usernameInput {
