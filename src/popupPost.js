@@ -13,7 +13,7 @@ function PopupPost({handleCreatePost}) {
     };
   
     return (
-        <div className="popup-box" onClick={handleCreatePost} >
+        <div className="popup-box">
             <div className="popupPost">
                 <button className="close-icon" onClick={handleCreatePost}>x</button>
                 <form action="/submit-form" method="POST" className='submitForm' onSubmit={handleSubmit}>
@@ -25,6 +25,10 @@ function PopupPost({handleCreatePost}) {
                 <label>
                     Title
                     <input name="title" className='titleInput' placeholder="Title" />
+                </label>
+                <label>
+                    Community
+                    <input name="community" className='communityInput' placeholder="Community" />
                 </label>
                 <label>
                     <textarea name="text" className='textInput' placeholder="Text" />
