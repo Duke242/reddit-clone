@@ -1,33 +1,37 @@
-import React from 'react'
-import './Feed.css'
-import PictureInfoBlock from './PictureInfoBlock'
-import PopularPostsContainer from './popularPostsContainer'
+import React, { useState } from 'react';
+import './Feed.css';
+import PictureInfoBlock from './PictureInfoBlock';
+import PopularPostsContainer from './popularPostsContainer';
+import PostBlock from './PostBlock';
+import PopupPost from './popupPost';
 
 function Feed() {
-    
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleCreatePost = () => {
+    setShowPopup(true);
+  };
+
   return (
     <div className='feed'>
-      <h3 className='trendingTodayHeader'>Trending today</h3>
-      <div className='pictureBlock'>
-        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800
-
-        '/>
-        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800
-
-        '/>
-        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800
-
-        '/>
-        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800
-
-        '/>
+      <div className='trendingHeader'>
+        <h3 className='trendingTodayHeader'>Trending today</h3>
+        <button className='createPostButton' onClick={handleCreatePost}>
+          Create Post
+        </button>
       </div>
-      <h3 className='popularPostsHeader'>Popular today</h3>
+      <div className='pictureBlock'>
+        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800' />
+        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800' />
+        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800' />
+        <PictureInfoBlock url='https://source.unsplash.com/user/c_v_r/1900x800' />
+      </div>
+      <h3 className='popularPostsHeader'>Popular posts</h3>
       <PopularPostsContainer />
-      
+      <PostBlock />
+      {showPopup && <PopupPost />}
     </div>
-  )
+  );
 }
 
-export default Feed
-
+export default Feed;

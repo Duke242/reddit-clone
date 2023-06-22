@@ -11,6 +11,27 @@
     margin-top: 1rem;
 }
 
+.trendingHeader { 
+    display: flex;
+}
+
+.createPostButton { 
+    margin-left: 1rem;
+    height: 2rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: rgb(255, 55, 0);
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    width: 7rem;
+}
+
+.createPostButton:hover {
+    background-color: rgb(255, 111, 72);
+    cursor: pointer;
+}
+
 .pictureBlock {
     display: flex;
 }
